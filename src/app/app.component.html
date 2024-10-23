@@ -1,6 +1,10 @@
 <app-header />
 
 <main>
-    <app-user-input />
+    <app-user-input 
+    [initialInvestment]="0" 
+    [annualInvestment]="0" 
+    [expectedReturn]="0" 
+    [duration]="0"/>
     <app-investment-results />
 </main>

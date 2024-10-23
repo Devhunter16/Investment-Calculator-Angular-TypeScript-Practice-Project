@@ -1,19 +1,19 @@
 <form>
     <div class="input-group">
         <label for="initial-investment">INITIAL INVESTMENT</label>
-        <input id="initial-investment" type="number" placeholder="0.00" min="0"/>
+        <input [value]="initialInvestment()" id="initial-investment" type="number" placeholder="0.00" min="0"/>
     </div>
     <div class="input-group">
         <label for="annual-investment">ANNUAL INVESTMENT</label>
-        <input id="annual-investment" type="number" placeholder="0.00" min="0"/>
+        <input [value]="annualInvestment()" id="annual-investment" type="number" placeholder="0.00" min="0"/>
     </div>
     <div class="input-group">
         <label for="expected-return">EXPECTED RETURN</label>
-        <input id="expected-return" type="number" placeholder="0.00" min="0"/>
+        <input [value]="expectedReturn()" id="expected-return" type="number" placeholder="0.00" min="0"/>
     </div>
     <div class="input-group">
         <label for="duration">DURATION</label>
-        <input id="duration" type="number" placeholder="0" min="0"/>
+        <input [value]="duration()" id="duration" type="number" placeholder="0" min="0"/>
     </div>
-    <button>Calculate</button>
+    <button type="submit" (click)="onCalculate()">Calculate</button>
 </form>
