@@ -13,13 +13,13 @@ export function calculateInvestmentResults(
   }>
 ): InvestmentResult[] {
   // This code ensures that these values default to zero if they are null or undefined
-  const initialInvestment = investmentResults.initialInvestment ?? 0;
-  const annualInvestment = investmentResults.annualInvestment ?? 0;
-  const expectedReturn = investmentResults.expectedReturn ?? 0;
-  const duration = investmentResults.duration ?? 0;
+  const initialInvestment: number = investmentResults.initialInvestment ?? 0;
+  const annualInvestment: number = investmentResults.annualInvestment ?? 0;
+  const expectedReturn: number = investmentResults.expectedReturn ?? 0;
+  const duration: number = investmentResults.duration ?? 0;
  
   const annualData = [];
-  let investmentValue = initialInvestment;
+  let investmentValue: number = initialInvestment;
 
   for (let i = 0; i < duration; i++) {
     const year = i + 1;
