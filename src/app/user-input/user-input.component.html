@@ -1,19 +1,23 @@
 <form [formGroup]="investmentForm" (ngSubmit)="onCalculate()">
     <div class="input-group">
-        <label for="initial-investment">INITIAL INVESTMENT</label>
-        <input id="initial-investment" formControlName="initialInvestment" type="number" placeholder="0.00" min="0"/>
+        <p>
+            <label for="initial-investment">INITIAL INVESTMENT</label>
+            <input id="initial-investment" formControlName="initialInvestment" type="number" placeholder="0.00" min="0"/>
+        </p>
+        <p>
+            <label for="annual-investment">ANNUAL INVESTMENT</label>
+            <input id="annual-investment" formControlName="annualInvestment" type="number" placeholder="0.00" min="0"/>
+        </p>
     </div>
     <div class="input-group">
-        <label for="annual-investment">ANNUAL INVESTMENT</label>
-        <input id="annual-investment" formControlName="annualInvestment" type="number" placeholder="0.00" min="0"/>
-    </div>
-    <div class="input-group">
-        <label for="expected-return">EXPECTED RETURN</label>
-        <input id="expected-return" formControlName="expectedReturn" type="number" placeholder="0.00" min="0"/>
-    </div>
-    <div class="input-group">
-        <label for="duration">DURATION</label>
-        <input id="duration" formControlName="duration" type="number" placeholder="0" min="0"/>
+        <p>
+            <label for="expected-return">EXPECTED RETURN</label>
+            <input id="expected-return" formControlName="expectedReturn" type="number" placeholder="0.00" min="0"/>
+        </p>
+        <p>
+            <label for="duration">DURATION</label>
+            <input id="duration" formControlName="duration" type="number" placeholder="0" min="0"/>
+        </p>
     </div>
     <button type="submit">Calculate</button>
 </form>
