@@ -5,7 +5,7 @@
 import { type InvestmentResult } from '../models/investment-result.model';
 
 export function calculateInvestmentResults(
-  investmentResults: Partial<{ 
+  userInputs: Partial<{ 
     initialInvestment: number | null; 
     annualInvestment: number | null; 
     expectedReturn: number | null; 
@@ -13,10 +13,10 @@ export function calculateInvestmentResults(
   }>
 ): InvestmentResult[] {
   // This code ensures that these values default to zero if they are null or undefined
-  const initialInvestment: number = investmentResults.initialInvestment ?? 0;
-  const annualInvestment: number = investmentResults.annualInvestment ?? 0;
-  const expectedReturn: number = investmentResults.expectedReturn ?? 0;
-  const duration: number = investmentResults.duration ?? 0;
+  const initialInvestment: number = userInputs.initialInvestment ?? 0;
+  const annualInvestment: number = userInputs.annualInvestment ?? 0;
+  const expectedReturn: number = userInputs.expectedReturn ?? 0;
+  const duration: number = userInputs.duration ?? 0;
  
   const annualData = [];
   let investmentValue: number = initialInvestment;
